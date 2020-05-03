@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+    php:
+        volumes:
+            - ./composer.json:/var/www/html/composer.json
+            - ./composer.lock:/var/www/html/composer.lock
+            - marketplace-sms-data-sync:/var/www/html:nocopy
+
+volumes:
+    marketplace-sms-data-sync:
+        external: true
